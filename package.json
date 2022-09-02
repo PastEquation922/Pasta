@@ -1,0 +1,22 @@
+{
+  "name": "pasta",
+  "version": "1.0.0",
+  "description": "Pasta is a discord bot, not food",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PastEquation922/Pasta.git"
+  },
+  "author": "PastEquation922",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PastEquation922/Pasta/issues"
+  },
+  "homepage": "https://github.com/PastEquation922/Pasta#readme",
+  "dependencies": {
+    "discord.js": "^14.3.0",
+    "nodemon": "^2.0.19"
+  }
+}
