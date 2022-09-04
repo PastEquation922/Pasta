@@ -1,14 +1,10 @@
-import { Embed, EmbedBuilder } from "discord.js";
-import { Command } from "../Command";
+import { Command } from "../Structures/Command";
 
-export const Help: Command = {
+export default new Command ({
     name: "help",
-    description: "Get some pasta-style help.",
-    run(client, interaction) {
-        const embedo = new EmbedBuilder()
-        .setTitle("Pasta Help Command 🍝")
-        .setDescription("Commands:\nHug Past\nHug Past\nHug Past")
-        .setColor("DarkBlue")
-        interaction.reply({ embeds: [embedo] })
-    },
-}
+    description: "Stop it. Get some help.",
+    run: async({client, interaction, args}) => {
+        interaction.reply("hey!")
+        
+    }
+})

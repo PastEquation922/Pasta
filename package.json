@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Pasta is a discord bot, not food",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node ./src/index.ts",
+    "start:dev": "nodemon ./src/index.ts",
+    "start:prod": "node dist/index.js",
+    "build": "tsc",
+    "watch": "tsc -w"
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,13 @@
   "homepage": "https://github.com/PastEquation922/Pasta#readme",
   "dependencies": {
     "discord.js": "^14.3.0",
+    "dotenv": "^16.0.2",
+    "glob": "^8.0.3",
     "mongodb": "^4.9.1",
     "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/node": "^18.7.14"
   }
 }
