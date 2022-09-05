@@ -1,4 +1,4 @@
-import { CommandInteraction, CommandInteractionOptionResolver, ComponentType, InteractionCollector } from "discord.js";
+import { CommandInteraction, CommandInteractionOptionResolver, ComponentType, EmbedBuilder, InteractionCollector } from "discord.js";
 import { client } from "..";
 import { Event } from "../Structures/Event";
 import { XInteraction } from "../typings/Command";
@@ -26,11 +26,23 @@ export default new Event('interactionCreate', async i => {
                     const value = c.values[0]
                     if(value == 'config') {
                         c.deferUpdate()
-                        i.followUp({ content: "This is Not Implemented yet.", ephemeral: true })
+                        const embedo = new EmbedBuilder()
+                        .setTitle("Configure the bot to your server!")
+                        .setFields([
+                            {name:"setlogchannel", value: "Set the logging channel for your server! (requires admin)", inline: true},
+                            {name:"setwelcomechannel", value: "Set the welcome channel for your server! (requires admin)", inline: true},
+                            {name:"configureblacklist", value: "Configure blacklisted words for your server! (requires admin)", inline: true},
+                        ])
+                        i.followUp({ embeds: [embedo], ephemeral: true })
                     }
                     if(value == 'fun') {
                         c.deferUpdate()
-                        i.followUp({ content: "This is Not Implemented yet.", ephemeral: true })
+                        const embedo = new EmbedBuilder()
+                        .setTitle("Fun commands!")
+                        .setFields([
+                            {name:"cat", value: "get a super cute cat. (I AM NOT RESPONSIBLE IF YOU DIE FROM CUTENESS)", inline: true},
+                        ])
+                        i.followUp({ embeds: [embedo], ephemeral: true })
                         
                     }
                 }

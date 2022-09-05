@@ -25,7 +25,9 @@
     "glob": "^8.0.3",
     "mongodb": "^4.9.1",
     "mongoose": "^6.5.4",
-    "nodemon": "^2.0.19"
+    "node-fetch": "^3.2.10",
+    "nodemon": "^2.0.19",
+    "undici": "^5.10.0"
   },
   "devDependencies": {
     "@types/glob": "^8.0.0",

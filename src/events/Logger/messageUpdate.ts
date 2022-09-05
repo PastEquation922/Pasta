@@ -8,8 +8,7 @@ export default new Event('messageUpdate', (o, n) => {
         if(data) {
             const embedo = new EmbedBuilder()
             .setAuthor({
-                name: `${n.author.tag}`,
-                iconURL: `${n.author.avatarURL()}`
+                name: `${n.author.tag}`
             })
             .setTitle("Message Edited in " + (n.channel as TextChannel).name)
             .setDescription(
